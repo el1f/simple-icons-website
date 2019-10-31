@@ -14,11 +14,11 @@ type Props = {
     color: string;
 };
 
-const IconCard = ({ icon: Brand, name, color }: Props) => {
+const IconCard = ({ icon: SVGcode, name, color }: Props) => {
     return (
         <Card>
             <Icon>
-                <SVG src={Brand} />
+                <SVG src={SVGcode} />
             </Icon>
             <Name>{name}</Name>
             <Color onClick={() => copy(color)}>
@@ -33,7 +33,7 @@ const IconCard = ({ icon: Brand, name, color }: Props) => {
                     <AddIcon />
                 </IconButton>
                 <IconButton>
-                    <CodeIcon />
+                    <CodeIcon onClick={() => copy(SVGcode)} />
                 </IconButton>
                 <IconButton>
                     <DownloadIcon />
