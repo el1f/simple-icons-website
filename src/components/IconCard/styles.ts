@@ -40,12 +40,15 @@ export const Color = styled.div`
     }
 `;
 
-export const ColorSpot = styled.div`
+export const ColorSpot = styled.div.attrs(({ color }) => ({
+    style: {
+        backgroundColor: `#${color}`,
+    },
+}))`
     height: 16px;
     width: 16px;
     margin-right: 4px;
     border-radius: 6px;
-    background-color: #${props => props.color};
 `;
 
 export const Actions = styled.div`
