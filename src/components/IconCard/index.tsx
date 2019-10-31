@@ -2,6 +2,7 @@ import { IconButton, Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/AddRounded';
 import DownloadIcon from '@material-ui/icons/CloudDownloadOutlined';
 import CodeIcon from '@material-ui/icons/CodeRounded';
+import copy from 'clipboard-copy';
 import React from 'react';
 import SVG from 'react-inlinesvg';
 
@@ -20,9 +21,12 @@ const IconCard = ({ icon: Brand, name, color }: Props) => {
                 <SVG src={Brand} />
             </Icon>
             <Name>{name}</Name>
-            <Color>
+            <Color onClick={() => copy(color)}>
                 <ColorSpot color={color} />
-                <Typography>{`#${color}`}</Typography>
+                <Typography>
+                    {`#${color}`}
+                    <span>copy</span>
+                </Typography>
             </Color>
             <Actions>
                 <IconButton>

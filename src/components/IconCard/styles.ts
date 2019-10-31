@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { ButtonBase,Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -26,17 +26,44 @@ export const Name = styled(Typography)`
     margin-bottom: auto;
 `;
 
-export const Color = styled.div`
+export const Color = styled(ButtonBase)`
     display: flex;
     margin-top: 8px;
     padding: 4px 6px 4px 4px;
     border-radius: 8px;
     background-color: ${props => props.theme.palette.grey[300]};
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 
     p {
         font-size: 0.75rem;
         font-weight: 700;
         line-height: 16px;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            background-color: ${props => props.theme.palette.grey[300]};
+            transition: background-color 0.2s ease-in-out, opacity 0.1s ease-in-out;
+        }
+    }
+
+    & > p {
+        position: relative;
+    }
+
+    &:hover {
+        background-color: ${props => props.theme.palette.grey[400]};
+
+        p {
+            span {
+                opacity: 1;
+                background-color: ${props => props.theme.palette.grey[400]};
+            }
+        }
     }
 `;
 
