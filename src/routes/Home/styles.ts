@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
     display: grid;
-    grid-column-gap: 16px;
+    grid-column-gap: 32px;
     padding: 32px 24px 24px 24px;
 
     @media (min-width: 960px) {
