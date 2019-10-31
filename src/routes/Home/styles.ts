@@ -6,8 +6,12 @@ export const HomeContainer = styled.div`
     padding: 32px 24px 24px 24px;
 
     @media (min-width: 960px) {
-        grid-template-columns: 2fr 10fr;
+        grid-template-columns: 256px 1fr;
     }
+`;
+
+export const IconBrowser = styled.div`
+    display: flex;
 `;
 
 export const Sidebar = styled.aside`
@@ -18,7 +22,7 @@ export const Sidebar = styled.aside`
     }
 `;
 
-export const Grid = styled.div`
+export const Grid = styled.div<{ compress: boolean }>`
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-column-gap: 16px;
@@ -31,9 +35,9 @@ export const Grid = styled.div`
         grid-template-columns: repeat(5, minmax(100px, 1fr));
     }
     @media (min-width: 1280px) {
-        grid-template-columns: repeat(7, minmax(100px, 1fr));
+        grid-template-columns: repeat(${props => (props.compress ? 4 : 7)}, minmax(100px, 1fr));
     }
     @media (min-width: 1600px) {
-        grid-template-columns: repeat(10, minmax(100px, 1fr));
+        grid-template-columns: repeat(${props => (props.compress ? 7 : 10)}, minmax(100px, 1fr));
     }
 `;

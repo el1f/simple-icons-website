@@ -22,6 +22,12 @@ const baseTheme = {
             fontWeight: 800,
             marginBottom: '2rem',
         },
+        h2: {
+            fontSize: '1.8rem',
+            lineHeight: '2.2rem',
+            fontWeight: 700,
+            marginBottom: '2rem',
+        },
         h6: {
             fontSize: '1rem',
             fontWeight: 700,
