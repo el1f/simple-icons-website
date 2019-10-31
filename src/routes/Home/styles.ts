@@ -6,6 +6,10 @@ export const HomeContainer = styled.div`
     padding: 32px 24px 24px 24px;
 
     @media (min-width: 960px) {
+        grid-template-columns: 224px 1fr;
+    }
+
+    @media (min-width: 1280px) {
         grid-template-columns: 256px 1fr;
     }
 `;
@@ -15,10 +19,14 @@ export const IconBrowser = styled.div`
 `;
 
 export const Sidebar = styled.aside`
-    min-width: 256px;
+    min-width: 224px;
 
     @media (max-width: 960px) {
         display: none;
+    }
+
+    @media (min-width: 1280px) {
+        min-width: 256px;
     }
 `;
 
@@ -32,7 +40,7 @@ export const Grid = styled.div<{ compress: boolean }>`
         grid-template-columns: repeat(3, minmax(100px, 1fr));
     }
     @media (min-width: 600px) {
-        grid-template-columns: repeat(5, minmax(100px, 1fr));
+        grid-template-columns: repeat(${props => (props.compress ? 3 : 5)}, minmax(100px, 1fr));
     }
     @media (min-width: 1280px) {
         grid-template-columns: repeat(${props => (props.compress ? 4 : 7)}, minmax(100px, 1fr));

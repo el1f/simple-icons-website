@@ -30,7 +30,6 @@ const Home = () => {
                         <Typography variant="h1">{`${icons.length} Free SVG icons for popular brands.`}</Typography>
                         <Grid compress={Boolean(activeIcon)}>
                             {icons
-                                .slice(0, 20)
                                 .filter(
                                     ({ title }) =>
                                         title.toLowerCase().indexOf(query.toLowerCase()) > -1,
