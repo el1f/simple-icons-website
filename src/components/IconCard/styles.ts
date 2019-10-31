@@ -8,18 +8,22 @@ export const Card = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 16px 8px 8px 8px;
+    padding: 16px 12px 8px 12px;
     border-radius: 16px;
 `;
 
 export const Icon = styled.div`
     height: 40px;
     width: 40px;
+    margin-bottom: 6px;
 `;
 
 export const Name = styled(Typography)`
+    font-size: 0.8rem;
+    line-height: 1rem;
     font-weight: 700;
-    margin-top: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
 `;
 
 export const Color = styled.div`
