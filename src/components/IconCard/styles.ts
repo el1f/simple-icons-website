@@ -55,8 +55,8 @@ export const Actions = styled.div`
     margin-top: 8px;
 
     button {
-        height: 28px;
-        width: 28px;
+        height: 32px;
+        width: 32px;
         padding: 0;
 
         svg {
