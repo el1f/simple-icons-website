@@ -24,7 +24,7 @@ const Home = () => {
                     />
                 </Sidebar>
                 <div>
-                    <Typography variant="h1">{`${icons.length} Free SVG icons for popular brands`}</Typography>
+                    <Typography variant="h1">{`${icons.length} Free SVG icons for popular brands.`}</Typography>
                     <Grid>
                         {icons
                             .filter(
