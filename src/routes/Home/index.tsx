@@ -27,7 +27,6 @@ const Home = () => {
                     <Typography variant="h1">{`${icons.length} Free SVG icons for popular brands`}</Typography>
                     <Grid>
                         {icons
-                            .slice(0, 50)
                             .filter(
                                 ({ title }) =>
                                     title.toLowerCase().indexOf(query.toLowerCase()) > -1,
