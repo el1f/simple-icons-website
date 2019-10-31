@@ -1,4 +1,4 @@
-import { ButtonBase,Typography } from '@material-ui/core';
+import { ButtonBase, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const Card = styled.div`
@@ -81,7 +81,8 @@ export const ColorSpot = styled.div.attrs(({ color }) => ({
 export const Actions = styled.div`
     margin-top: 8px;
 
-    button {
+    button,
+    a {
         height: 32px;
         width: 32px;
         padding: 0;

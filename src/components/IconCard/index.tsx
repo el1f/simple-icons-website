@@ -1,4 +1,4 @@
-import { IconButton, Typography } from '@material-ui/core';
+import { IconButton, Tooltip, Typography } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/AddRounded';
 import DownloadIcon from '@material-ui/icons/CloudDownloadOutlined';
 import CodeIcon from '@material-ui/icons/CodeRounded';
@@ -29,15 +29,25 @@ const IconCard = ({ icon: SVGcode, name, color }: Props) => {
                 </Typography>
             </Color>
             <Actions>
-                <IconButton>
+                {/* <IconButton>
                     <AddIcon />
-                </IconButton>
-                <IconButton>
-                    <CodeIcon onClick={() => copy(SVGcode)} />
-                </IconButton>
-                <IconButton>
-                    <DownloadIcon />
-                </IconButton>
+                </IconButton> */}
+                <Tooltip title="Copy SVG code">
+                    <IconButton>
+                        <CodeIcon onClick={() => copy(SVGcode)} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Download SVG icon">
+                    <IconButton
+                        component="a"
+                        download={name}
+                        href={`data:image/svg+xml; charset=utf8, ' ${encodeURIComponent(
+                            SVGcode.replace(/></g, '>\n\r<'),
+                        )}`}
+                    >
+                        <DownloadIcon />
+                    </IconButton>
+                </Tooltip>
             </Actions>
         </Card>
     );
