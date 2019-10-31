@@ -1,12 +1,30 @@
+import { CssBaseline, MuiThemeProvider, withWidth } from '@material-ui/core';
+import { StylesProvider } from '@material-ui/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { ThemeProvider } from 'styled-components';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import * as serviceWorker from './config/serviceWorker';
+import getTheme from './config/theme';
+import Routes from './routes';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+const App = ({ width }: { width: 'xs' | 'sm' | 'md' | 'lg' | 'xl' }) => (
+    <StylesProvider injectFirst>
+        <MuiThemeProvider theme={getTheme(width)}>
+            <ThemeProvider theme={getTheme(width)}>
+                <>
+                    <CssBaseline />
+                    <Routes />
+                </>
+            </ThemeProvider>
+        </MuiThemeProvider>
+    </StylesProvider>
+);
+
+const EnhancedApp = withWidth()(App);
+
+const root = document.getElementById('root');
+
+if (root !== null) ReactDOM.render(<EnhancedApp />, root);
+
 serviceWorker.unregister();
