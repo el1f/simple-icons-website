@@ -16,6 +16,12 @@ const baseTheme = {
     typography: {
         useNextVariants: true,
         fontFamily: 'Poppins',
+        h1: {
+            fontSize: '2rem',
+            lineHeight: '2.5rem',
+            fontWeight: 800,
+            marginBottom: '2rem',
+        },
         h6: {
             fontSize: '1rem',
             fontWeight: 700,

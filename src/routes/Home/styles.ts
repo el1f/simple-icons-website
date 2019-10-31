@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const HomeContainer = styled.div`
     display: grid;
     grid-column-gap: 16px;
-    padding: 24px;
+    padding: 32px 24px 24px 24px;
 
     @media (min-width: 960px) {
         grid-template-columns: 2fr 10fr;
     }
 `;
 
-export const Sidebar = styled.div`
+export const Sidebar = styled.aside`
     min-width: 256px;
 
     @media (max-width: 960px) {

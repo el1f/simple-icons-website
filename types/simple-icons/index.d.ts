@@ -12,6 +12,7 @@ declare module 'simple-icons' {
 
     export interface SimpleIconsProvider {
         get: typeof getSimpleIcon;
+        [key: string]: SimpleIcon;
     }
 
     const SimpleIcons: SimpleIconsProvider;
