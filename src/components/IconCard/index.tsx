@@ -12,11 +12,12 @@ type Props = {
     icon: any;
     name: string;
     color: string;
+    onClick: () => void;
 };
 
-const IconCard = ({ icon: SVGcode, name, color }: Props) => {
+const IconCard = ({ icon: SVGcode, name, color, onClick }: Props) => {
     return (
-        <Card>
+        <Card color={color} onClick={onClick}>
             <Icon>
                 <SVG src={SVGcode} />
             </Icon>

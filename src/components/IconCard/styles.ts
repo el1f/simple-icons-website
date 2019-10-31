@@ -1,6 +1,13 @@
 import { ButtonBase, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
+export const Icon = styled.div`
+    height: 40px;
+    width: 40px;
+    margin-bottom: 6px;
+    transition: all 0.2s ease-in-out;
+`;
+
 export const Card = styled.div`
     background: #ffffff;
     display: flex;
@@ -10,12 +17,16 @@ export const Card = styled.div`
     text-align: center;
     padding: 16px 12px 8px 12px;
     border-radius: 16px;
-`;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-in-out;
 
-export const Icon = styled.div`
-    height: 40px;
-    width: 40px;
-    margin-bottom: 6px;
+    &:hover {
+        box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.1);
+
+        ${Icon} {
+            fill: #${props => props.color};
+        }
+    }
 `;
 
 export const Name = styled(Typography)`
