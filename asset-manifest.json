@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/simple-icons-website/static/js/main.7b590d81.chunk.js",
+    "main.js.map": "/simple-icons-website/static/js/main.7b590d81.chunk.js.map",
+    "runtime-main.js": "/simple-icons-website/static/js/runtime-main.21b3c2d7.js",
+    "runtime-main.js.map": "/simple-icons-website/static/js/runtime-main.21b3c2d7.js.map",
+    "static/js/2.88c5c263.chunk.js": "/simple-icons-website/static/js/2.88c5c263.chunk.js",
+    "static/js/2.88c5c263.chunk.js.map": "/simple-icons-website/static/js/2.88c5c263.chunk.js.map",
+    "index.html": "/simple-icons-website/index.html",
+    "precache-manifest.1541f1d402ede0ca869532ac86d598d8.js": "/simple-icons-website/precache-manifest.1541f1d402ede0ca869532ac86d598d8.js",
+    "service-worker.js": "/simple-icons-website/service-worker.js",
+    "static/media/github.617870e4.svg": "/simple-icons-website/static/media/github.617870e4.svg",
+    "static/media/npm.06851a19.svg": "/simple-icons-website/static/media/npm.06851a19.svg",
+    "static/media/simpleicons.3f588347.svg": "/simple-icons-website/static/media/simpleicons.3f588347.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21b3c2d7.js",
+    "static/js/2.88c5c263.chunk.js",
+    "static/js/main.7b590d81.chunk.js"
+  ]
+}
