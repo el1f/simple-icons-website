@@ -12,9 +12,6 @@ const baseTheme = {
         secondary: {
             main: '#000000',
         },
-        bacgkround: {
-            main: '#F3F3F3',
-        },
     },
     typography: {
         useNextVariants: true,
