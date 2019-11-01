@@ -54,4 +54,4 @@ const IconCard = ({ icon: SVGcode, name, color, onClick }: Props) => {
     );
 };
 
-export default IconCard;
+export default React.memo(IconCard);

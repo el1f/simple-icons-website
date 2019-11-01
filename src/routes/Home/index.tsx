@@ -1,14 +1,15 @@
 import { TextField, Typography } from '@material-ui/core';
-import IconCard from 'components/IconCard';
+// import IconCardGrid from 'components/IconCardGrid';
 import IconExplorer from 'components/IconExplorer';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import SimpleIcons, { SimpleIcon } from 'simple-icons';
-import { Field } from 'styles/Fields';
 import { Wrapper } from 'styles/Layout';
 
-import { Grid, HomeContainer, IconBrowser, Sidebar } from './styles';
+import { HomeContainer, IconBrowser, Sidebar } from './styles';
 
 const Home = () => {
+    const IconCardGrid = React.lazy(() => import('components/IconCardGrid'));
+
     const [query, setQuery] = useState('');
     const [activeIcon, setActiveIcon] = useState<null | SimpleIcon>(null);
     const icons = Object.values(SimpleIcons);
@@ -28,27 +29,16 @@ const Home = () => {
                 <IconBrowser>
                     <div>
                         <Typography variant="h1">{`${icons.length} Free SVG icons for popular brands.`}</Typography>
-                        <Grid compress={Boolean(activeIcon)}>
-                            {icons
-                                .filter(
+                        <Suspense fallback={<p>Loading icons</p>}>
+                            <IconCardGrid
+                                icons={icons.filter(
                                     ({ title }) =>
                                         title.toLowerCase().indexOf(query.toLowerCase()) > -1,
-                                )
-                                .map(icon => {
-                                    const { slug, title, svg, hex } = icon;
-                                    return (
-                                        slug && (
-                                            <IconCard
-                                                key={slug}
-                                                name={title}
-                                                icon={svg}
-                                                color={hex}
-                                                onClick={() => setActiveIcon(icon)}
-                                            />
-                                        )
-                                    );
-                                })}
-                        </Grid>
+                                )}
+                                onIconClick={setActiveIcon}
+                                compress={Boolean(activeIcon)}
+                            />
+                        </Suspense>
                     </div>
                     {activeIcon && (
                         <IconExplorer
