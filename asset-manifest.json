@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/simple-icons-website/static/js/main.b8855c6b.chunk.js",
-    "main.js.map": "/simple-icons-website/static/js/main.b8855c6b.chunk.js.map",
+    "main.js": "/simple-icons-website/static/js/main.81c51377.chunk.js",
+    "main.js.map": "/simple-icons-website/static/js/main.81c51377.chunk.js.map",
     "runtime-main.js": "/simple-icons-website/static/js/runtime-main.d5f593a2.js",
     "runtime-main.js.map": "/simple-icons-website/static/js/runtime-main.d5f593a2.js.map",
     "static/js/2.16fdb0be.chunk.js": "/simple-icons-website/static/js/2.16fdb0be.chunk.js",
@@ -11,7 +11,7 @@
     "static/js/4.2d0a7da3.chunk.js": "/simple-icons-website/static/js/4.2d0a7da3.chunk.js",
     "static/js/4.2d0a7da3.chunk.js.map": "/simple-icons-website/static/js/4.2d0a7da3.chunk.js.map",
     "index.html": "/simple-icons-website/index.html",
-    "precache-manifest.8df6b2b2c8ef39aeeb166eccb450300b.js": "/simple-icons-website/precache-manifest.8df6b2b2c8ef39aeeb166eccb450300b.js",
+    "precache-manifest.188aa267bada8853e42d6291e26456b8.js": "/simple-icons-website/precache-manifest.188aa267bada8853e42d6291e26456b8.js",
     "service-worker.js": "/simple-icons-website/service-worker.js",
     "static/media/github.617870e4.svg": "/simple-icons-website/static/media/github.617870e4.svg",
     "static/media/npm.06851a19.svg": "/simple-icons-website/static/media/npm.06851a19.svg",
@@ -20,6 +20,6 @@
   "entrypoints": [
     "static/js/runtime-main.d5f593a2.js",
     "static/js/2.16fdb0be.chunk.js",
-    "static/js/main.b8855c6b.chunk.js"
+    "static/js/main.81c51377.chunk.js"
   ]
 }
